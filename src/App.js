@@ -9,7 +9,6 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(populateProduce());
-    dispatch(addToCart());
   }, [dispatch]);
 
   const [showCart, setShowCart] = useState(false);
