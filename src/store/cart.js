@@ -11,7 +11,7 @@ export const addToCart = (id) => {
 export default function cartReducer(state = {}, action) {
   switch (action.type) {
     case ADD_CART:
-      const cart = { ...state, cart: { ...state.cart, action.id, count: 1 } };
+      const cart = { ...state, cart: { ...state.cart, id, count: 1 } };
       return cart;
     default:
       return state;
