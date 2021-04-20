@@ -7,6 +7,7 @@ function ProduceDetails({ produce }) {
   const dispatch = useDispatch();
 
   const plusButton = (e) => {
+    console.log(e.target.value)
     dispatch(addToCart(e.target.value));
   };
 
@@ -19,7 +20,7 @@ function ProduceDetails({ produce }) {
         </button>
         <button
           className={"plus-button" + (cartItem ? " selected" : "")}
-          value={produce?.id}
+          value={produce.id}
           onClick={plusButton}
         >
           <i className="fas fa-plus" />
